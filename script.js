@@ -1,32 +1,10 @@
 const boxContainer = document.getElementById("box-container");
 const clearButton = document.getElementById("clear");
 const boxesArray = [];
-var action = "";
-
-// -----------------------------------
-// Handles clicks on boxes
-function boxClick(e) {
-  if (e.target.style.backgroundColor === '') {
-    e.target.style.backgroundColor = 'green';
-    e.target.style.backgroundImage = 'url("./img/+.png")';
-  } else if (e.target.style.backgroundColor === 'green') {
-    e.target.style.backgroundColor = 'red';
-    e.target.style.backgroundImage = 'url("./img/-.png")';
-  } else if (e.target.style.backgroundColor === 'red') {
-    e.target.style.backgroundColor = 'yellow';
-    e.target.style.backgroundImage = 'url("./img/o.png")';
-  } else if (e.target.style.backgroundColor === 'yellow') {
-    e.target.style.backgroundColor = 'gray';
-    e.target.style.backgroundImage = 'url("./img/x.png")';
-  } else {
-    e.target.style.backgroundColor = '';
-    e.target.style.backgroundImage = '';
-  }
-}
 
 // -----------------------------------
 // Handles clicks on boxes - transparent background version
-function boxClickV2(e) {
+function boxClick(e) {
   if (e.target.style.backgroundImage === '') {
     e.target.style.backgroundImage = 'url("./img/+.png")';
   } else if (e.target.style.backgroundImage === 'url("./img/+.png")') {
@@ -39,18 +17,6 @@ function boxClickV2(e) {
     e.target.style.backgroundImage = '';
   }
 }
-
-// -----------------------------------
-// Handles clicks on "clear" button
-function clearBoxes() {
-  while (boxContainer.hasChildNodes()) {
-    boxContainer.removeChild(boxContainer.firstChild);
-  }
-  boxesArray.length = 0;
-  generateBoxes();
-}
-
-clearButton.addEventListener("click", clearBoxes);
 
 // -----------------------------------
 // Generates calendar skeleton
@@ -73,3 +39,15 @@ function generateBoxes() {
 }
 
 generateBoxes();
+
+// -----------------------------------
+// Handles clicks on "clear" button
+function clearBoxes() {
+  while (boxContainer.hasChildNodes()) {
+    boxContainer.removeChild(boxContainer.firstChild);
+  }
+  boxesArray.length = 0;
+  generateBoxes();
+}
+
+clearButton.addEventListener("click", clearBoxes);
