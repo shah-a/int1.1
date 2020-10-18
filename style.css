@@ -9,9 +9,20 @@ body {
   align-items: center;
 }
 
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 #box-container {
   display: grid;
   grid-template-columns: auto auto auto auto auto auto auto;
+}
+
+#clear-button {
+  align-self: flex-end;
+  margin: 1em 0;
 }
 
 .boxes {
@@ -20,9 +31,6 @@ body {
   height: 50px;
   border: 1px solid black;
   transition: all 0.2s;
-}
-
-.boxes:hover {
-  background-color: gray;
-  transition: all 0.2s;
+  background-size: cover;
+  background-position: center;
 }
