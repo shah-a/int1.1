@@ -1,3 +1,10 @@
+/* Colour palette: https://colorhunt.co/palette/212984
+#f1f6f9
+#14274e
+#394867
+#9ba4b4
+*/
+
 html, body {
   margin: 0;
   height: 100%;
@@ -7,6 +14,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: "Helvetica", sans-serif;
+  background-color: #14274e;
 }
 
 #wrapper {
@@ -15,22 +24,47 @@ body {
   align-items: center;
 }
 
+#wrapper h1 {
+  color: #f1f6f9;
+}
+
 #box-container {
   display: grid;
   grid-template-columns: auto auto auto auto auto auto auto;
-}
-
-#clear-button {
-  align-self: flex-end;
-  margin: 1em 0;
 }
 
 .boxes {
   margin: 0.5px;
   width: 50px;
   height: 50px;
-  border: 1px solid black;
-  transition: all 0.2s;
+  border: 1px solid #14274e;
+  border-radius: 3px;
   background-size: cover;
   background-position: center;
+  background-color: #9ba4b4;
+  transition: all 0.2s;
+}
+
+.boxes:hover {
+  cursor: pointer;
+  background-color: #f1f6f9;
+}
+
+#clear-button {
+  align-self: flex-end;
+  margin: 1em 0 0 0;
+}
+
+#clear-button > #clear {
+  padding: 0.5em 2em;
+  color: #f1f6f9;
+  background-color: #394867;
+  border: 1px solid #f1f6f9;
+  border-radius: 3px;
+}
+
+#clear-button > #clear:hover {
+  color: #394867;
+  background-color: #f1f6f9;
+  transition: all 0.2s;
 }
