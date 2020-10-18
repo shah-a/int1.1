@@ -6,35 +6,37 @@ var action = "";
 // -----------------------------------
 // Handles clicks on boxes
 function boxClick(e) {
-  if (e.target.style.backgroundColor === "") {
-    e.target.style.backgroundColor = "green";
-    e.target.style.backgroundImage = "url(./img/+.png)";
-  } else if (e.target.style.backgroundColor === "green") {
-    e.target.style.backgroundColor = "red";
-    e.target.style.backgroundImage = "url(./img/-.png)";
-  } else if (e.target.style.backgroundColor === "red") {
-    e.target.style.backgroundColor = "yellow";
-    e.target.style.backgroundImage = "url(./img/o.png)";
-  } else if (e.target.style.backgroundColor === "yellow") {
-    e.target.style.backgroundColor = "gray";
-    e.target.style.backgroundImage = "url(./img/x.png)";
+  if (e.target.style.backgroundColor === '') {
+    e.target.style.backgroundColor = 'green';
+    e.target.style.backgroundImage = 'url("./img/+.png")';
+  } else if (e.target.style.backgroundColor === 'green') {
+    e.target.style.backgroundColor = 'red';
+    e.target.style.backgroundImage = 'url("./img/-.png")';
+  } else if (e.target.style.backgroundColor === 'red') {
+    e.target.style.backgroundColor = 'yellow';
+    e.target.style.backgroundImage = 'url("./img/o.png")';
+  } else if (e.target.style.backgroundColor === 'yellow') {
+    e.target.style.backgroundColor = 'gray';
+    e.target.style.backgroundImage = 'url("./img/x.png")';
   } else {
-    e.target.style.backgroundColor = "";
-    e.target.style.backgroundImage = "";
+    e.target.style.backgroundColor = '';
+    e.target.style.backgroundImage = '';
   }
 }
 
+// -----------------------------------
+// Handles clicks on boxes - transparent background version
 function boxClickV2(e) {
-  if (String(e.target.style.backgroundImage) === "") {
-    e.target.style.backgroundImage = "url(./img/+.png)";
-  } else if (String(e.target.style.backgroundImage) === "url(./img/+.png)") {
-    e.target.style.backgroundImage = "url(./img/-.png)";
-  } else if (e.target.style.backgroundImage === "url(./img/-.png)") {
-    e.target.style.backgroundImage = "url(./img/o.png)";
-  } else if (e.target.style.backgroundImage === "url(./img/o.png)") {
-    e.target.style.backgroundImage = "url(./img/x.png)";
+  if (e.target.style.backgroundImage === '') {
+    e.target.style.backgroundImage = 'url("./img/+.png")';
+  } else if (e.target.style.backgroundImage === 'url("./img/+.png")') {
+    e.target.style.backgroundImage = 'url("./img/-.png")';
+  } else if (e.target.style.backgroundImage === 'url("./img/-.png")') {
+    e.target.style.backgroundImage = 'url("./img/o.png")';
+  } else if (e.target.style.backgroundImage === 'url("./img/o.png")') {
+    e.target.style.backgroundImage = 'url("./img/x.png")';
   } else {
-    e.target.style.backgroundImage = "";
+    e.target.style.backgroundImage = '';
   }
 }
 
