@@ -5,6 +5,8 @@
 #9ba4b4
 */
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
 html, body {
   margin: 0;
   height: 100%;
@@ -14,7 +16,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: "Helvetica", sans-serif;
+  font-family: 'Roboto', sans-serif;
   background-color: #14274e;
 }
 
@@ -25,6 +27,7 @@ body {
 }
 
 #wrapper h1 {
+  margin: 0 0 1rem 0;
   color: #f1f6f9;
 }
 
@@ -39,7 +42,8 @@ body {
   height: 50px;
   border: 1px solid #14274e;
   border-radius: 3px;
-  background-size: cover;
+  background-size: 70%;
+  background-repeat: no-repeat;
   background-position: center;
   background-color: #9ba4b4;
 }
@@ -49,12 +53,13 @@ body {
   background-color: #f1f6f9;
 }
 
-#clear-button {
+#reset-button {
   align-self: flex-end;
-  margin: 1em 0 0 0;
+  margin: 1rem 0 0 0;
 }
 
-#clear-button > #clear {
+#reset-button > #reset {
+  font-family: 'Roboto', sans-serif;
   padding: 0.5em 2em;
   color: #f1f6f9;
   background-color: #394867;
@@ -62,8 +67,8 @@ body {
   border-radius: 3px;
 }
 
-#clear-button > #clear:hover {
-  color: #394867;
+#reset-button > #reset:hover {
+  color: #14274e;
   background-color: #f1f6f9;
   cursor: pointer;
   transition: all 0.2s;

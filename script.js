@@ -1,20 +1,22 @@
 const boxContainer = document.getElementById("box-container");
-const clearButton = document.getElementById("clear");
+const resetButton = document.getElementById("reset");
 const boxesArray = [];
 
 // -----------------------------------
 // Handles clicks on boxes - transparent background version
 function boxClick(e) {
   if (e.target.style.backgroundImage === '') {
-    e.target.style.backgroundImage = 'url("./img/+.png")';
-  } else if (e.target.style.backgroundImage === 'url("./img/+.png")') {
-    e.target.style.backgroundImage = 'url("./img/-.png")';
-  } else if (e.target.style.backgroundImage === 'url("./img/-.png")') {
-    e.target.style.backgroundImage = 'url("./img/o.png")';
-  } else if (e.target.style.backgroundImage === 'url("./img/o.png")') {
+    e.target.style.backgroundImage = 'url("./img/+.svg")';
+  } else if (e.target.style.backgroundImage === 'url("./img/+.svg")') {
+    e.target.style.backgroundImage = 'url("./img/-.svg")';
+  } else if (e.target.style.backgroundImage === 'url("./img/-.svg")') {
+    e.target.style.backgroundImage = 'url("./img/o.svg")';
+  } else if (e.target.style.backgroundImage === 'url("./img/o.svg")') {
     e.target.style.backgroundImage = 'url("./img/x.png")';
+    e.target.style.backgroundSize = 'cover';
   } else {
     e.target.style.backgroundImage = '';
+    e.target.style.backgroundSize = '';
   }
 }
 
@@ -41,8 +43,8 @@ function generateBoxes() {
 generateBoxes();
 
 // -----------------------------------
-// Handles clicks on "clear" button
-function clearBoxes() {
+// Handles clicks on "reset" button
+function resetBoxes() {
   while (boxContainer.hasChildNodes()) {
     boxContainer.removeChild(boxContainer.firstChild);
   }
@@ -50,4 +52,4 @@ function clearBoxes() {
   generateBoxes();
 }
 
-clearButton.addEventListener("click", clearBoxes);
+resetButton.addEventListener("click", resetBoxes);
